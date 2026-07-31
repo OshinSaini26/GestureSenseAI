@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>GestureSense AI</title>
+     <h1>GestureSense AI</h1>
+
+<p class="subtitle">
+An AI-powered real-time hand gesture recognition system
+for sign language communication.
+</p>
+<div class="status">
+
+    <span class="dot"></span>
+
+    <span>Camera Connected</span>
+
+</div>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="video-panel">
+
+        <h2>Live Camera</h2>
+
+        <img src="{{ url_for('video') }}">
+
+    </div>
+
+    <div class="info-panel">
+
+        <h1>GestureSense AI</h1>
+
+        <div class="card">
+
+            <h3>Current Letter</h3>
+
+            <p id="letter">-</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Confidence</h3>
+
+            <p id="confidence">0%</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Current Word</h3>
+
+            <p id="word">-</p>
+
+
+        </div>
+        <div class="buttons">
+            <button onclick="addLetter()">Add Letter</button>
+            <button onclick="addWord()">Add Word</button>
+            <button onclick="clearText()">Clear</button>
+            <button onclick="speak()">Speak</button>
+            <button onclick="backspace()">Backspace</button>
+            <button onclick="exitApp()">Exit</button>
+        </div>
+
+        <div class="card">
+
+            <h3>Sentence</h3>
+
+            <p id="sentence">-</p>
+
+        </div>
+        <div class="card">
+
+    <h3>Model Accuracy</h3>
+
+    <p class="accuracy">
+
+        99.1%
+
+    </p>
+
+</div>
+
+    </div>
+
+</div>
+<footer>
+
+Developed by <strong>Oshin Saini</strong>
+
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
